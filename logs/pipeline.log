@@ -1,0 +1,68 @@
+2026-09-17 12:51:09,506 - INFO - Pipeline started
+2026-09-17 12:51:09,506 - INFO - Loading input data
+2026-09-17 12:51:09,508 - INFO - Loaded 10 records
+2026-09-17 12:51:09,508 - INFO - Validating columns
+2026-09-17 12:51:09,508 - INFO - Validation successful
+2026-09-17 12:51:09,515 - INFO - Cleaning completed. Removed 3 records
+2026-09-17 12:51:09,516 - INFO - Transforming data
+2026-09-17 12:51:09,517 - INFO - Transformation completed
+2026-09-17 12:51:09,520 - INFO - Output saved to data/output/sales_cleaned.csv
+2026-09-17 12:51:09,520 - INFO - Pipeline completed successfully
+2026-09-17 13:11:18,025 - INFO - Pipeline started
+2026-09-17 13:11:18,025 - INFO - Loading input data
+2026-09-17 13:11:18,025 - ERROR - Pipeline failed: [Errno 2] No such file or directory: 'data/input/input.csv'
+Traceback (most recent call last):
+  File "D:\yr novatech internship\task 2 Data Processing Pipeline\src\main.py", line 27, in main
+    df = load_data(
+         ^^^^^^^^^^
+  File "D:\yr novatech internship\task 2 Data Processing Pipeline\src\ingestion.py", line 35, in load_data
+    return read_csv(source)
+           ^^^^^^^^^^^^^^^^
+  File "D:\yr novatech internship\task 2 Data Processing Pipeline\src\ingestion.py", line 9, in read_csv
+    return pd.read_csv(file_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yr novatech internship\task 2 Data Processing Pipeline\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yr novatech internship\task 2 Data Processing Pipeline\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yr novatech internship\task 2 Data Processing Pipeline\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1645, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\yr novatech internship\task 2 Data Processing Pipeline\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1904, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "D:\yr novatech internship\task 2 Data Processing Pipeline\venv\Lib\site-packages\pandas\io\common.py", line 930, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/input/input.csv'
+2026-09-17 13:13:03,043 - INFO - Pipeline started
+2026-09-17 13:13:03,043 - INFO - Loading input data
+2026-09-17 13:13:03,086 - INFO - Loaded 25000 rows and 11 columns
+2026-09-17 13:13:03,086 - INFO - Validating dataset
+2026-09-17 13:13:03,086 - INFO - Validation successful
+2026-09-17 13:13:03,109 - INFO - Input quality report: {'rows': 25000, 'columns': 11, 'duplicate_rows': 0, 'missing_values': 0}
+2026-09-17 13:13:03,109 - INFO - Cleaning data
+2026-09-17 13:13:03,169 - ERROR - Pipeline failed: cannot access local variable 'median_value' where it is not associated with a value
+Traceback (most recent call last):
+  File "D:\yr novatech internship\task 2 Data Processing Pipeline\src\main.py", line 64, in main
+    df = clean_data(df)
+         ^^^^^^^^^^^^^^
+  File "D:\yr novatech internship\task 2 Data Processing Pipeline\src\cleaning.py", line 101, in clean_data
+    if pd.notna(median_value):
+                ^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'median_value' where it is not associated with a value
+2026-09-17 13:13:49,642 - INFO - Pipeline started
+2026-09-17 13:13:49,642 - INFO - Loading input data
+2026-09-17 13:13:49,686 - INFO - Loaded 25000 rows and 11 columns
+2026-09-17 13:13:49,686 - INFO - Validating dataset
+2026-09-17 13:13:49,686 - INFO - Validation successful
+2026-09-17 13:13:49,709 - INFO - Input quality report: {'rows': 25000, 'columns': 11, 'duplicate_rows': 0, 'missing_values': 0}
+2026-09-17 13:13:49,710 - INFO - Cleaning data
+2026-09-17 13:13:49,773 - INFO - Cleaning completed. Rows before: 25000, Rows after: 25000
+2026-09-17 13:13:49,773 - INFO - Transforming data
+2026-09-17 13:13:49,776 - INFO - Transformation completed
+2026-09-17 13:13:49,837 - INFO - Output saved to data/output/cleaned_data.csv
+2026-09-17 13:13:49,858 - INFO - Final quality report: {'rows': 25000, 'columns': 11, 'duplicate_rows': 0, 'missing_values': 0}
+2026-09-17 13:13:49,858 - INFO - Pipeline completed successfully

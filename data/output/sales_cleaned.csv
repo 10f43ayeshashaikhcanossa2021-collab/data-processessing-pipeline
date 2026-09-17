@@ -1,0 +1,8 @@
+order_id,customer_name,product,quantity,price,order_date,city,total_amount,order_year,order_month,price_category
+1001,Ayesha,Laptop,2,55000.0,2026-01-10,Mumbai,110000.0,2026,1,High
+1002,Rahul,Mouse,3,800.0,2026-01-11,Pune,2400.0,2026,1,Low
+1003,Unknown,Keyboard,1,1500.0,2026-01-12,Mumbai,1500.0,2026,1,Low
+1004,Sana,Laptop,1,55000.0,2026-01-13,Delhi,55000.0,2026,1,High
+1005,Ali,Monitor,2,13250.0,2026-01-14,Pune,26500.0,2026,1,Medium
+1008,Meera,Laptop,1,55000.0,2026-01-17,Unknown,55000.0,2026,1,High
+1009,Ravi,Monitor,2,25000.0,2026-01-18,Pune,50000.0,2026,1,Medium
