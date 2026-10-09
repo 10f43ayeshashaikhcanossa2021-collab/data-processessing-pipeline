@@ -20,7 +20,7 @@ function UploadSection({ onProcessed }) {
       formData.append("file", file);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/process/file",
+        "https://data-processessing-pipeline.onrender.com/process/file",
         {
           method: "POST",
           body: formData,
@@ -52,7 +52,7 @@ function UploadSection({ onProcessed }) {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/process/api",
+        "https://data-processessing-pipeline.onrender.com/process/api",
         {
           method: "POST",
           headers: {
